@@ -42,7 +42,7 @@ public class testStack {
 
 	@Test
 	/**
-	 * Tries to remove when no elements left.
+	 * Tries to remove when no elements have left.
 	 */
 	public void testRemoveWhenEmpty() {
 		while (true) {
