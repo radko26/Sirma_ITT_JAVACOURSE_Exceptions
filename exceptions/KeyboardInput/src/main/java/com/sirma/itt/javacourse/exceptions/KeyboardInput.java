@@ -11,27 +11,19 @@ import java.util.Scanner;
  */
 
 public class KeyboardInput {
-	private static Scanner keyboardInput;
-	static int number;
+	private Scanner keyboardInput;
+	private int number;
 
-	private static int input(int number) throws OutOfGivenBoundException {
+	public int input() throws OutOfGivenBoundException, InputMismatchException {
 		keyboardInput = new Scanner(System.in);
 		try {
 			number = keyboardInput.nextInt();
 		} catch (InputMismatchException e) {
-			e.printStackTrace();
+			throw new InputMismatchException("Enter number please");
 		}
 		if (number < 0 || number > 100) {
-			throw new OutOfGivenBoundException();
+			throw new OutOfGivenBoundException("Out of given range");
 		}
 		return number;
-	}
-
-	public static void main(String[] args) {
-		try {
-			number = input(number);
-		} catch (OutOfGivenBoundException e) {
-			System.out.println(e.printException());
-		}
 	}
 }

@@ -6,10 +6,9 @@ package com.sirma.itt.javacourse.exception;
  * @author radoslav
  */
 public class StackEmptyException extends Exception {
-	public StackEmptyException() {
+
+	public StackEmptyException(String string) {
+		super(string);
 	}
 
-	public String printException() {
-		return ("Stack is empty");
-	}
 }

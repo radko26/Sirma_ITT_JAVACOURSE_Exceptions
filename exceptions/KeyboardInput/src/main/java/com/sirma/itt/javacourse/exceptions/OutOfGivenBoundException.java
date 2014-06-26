@@ -1,17 +1,12 @@
 package com.sirma.itt.javacourse.exceptions;
 
 /**
- * 
+ * OutOfGivenBoundException occur when the number is out of the given range.
  * 
  * @author radoslav
  */
-@SuppressWarnings("serial")
 public class OutOfGivenBoundException extends Exception {
-	public OutOfGivenBoundException() {
-
-	}
-
-	public String printException() {
-		return ("Entered number is not in the bounds");
+	public OutOfGivenBoundException(String msg) {
+		super(msg);
 	}
 }

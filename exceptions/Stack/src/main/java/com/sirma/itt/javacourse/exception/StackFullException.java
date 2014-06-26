@@ -6,10 +6,7 @@ package com.sirma.itt.javacourse.exception;
  * @author radoslav
  */
 public class StackFullException extends Exception {
-	public StackFullException() {
-	}
-
-	public String printException() {
-		return ("Stack is full");
+	public StackFullException(String string) {
+		super(string);
 	}
 }

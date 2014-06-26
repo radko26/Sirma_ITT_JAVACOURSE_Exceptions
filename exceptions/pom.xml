@@ -2,13 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sirma.itt.javacourse.exceptions</groupId>
-	<artifactId>exceptions</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Exceptions</name>
 	<description>Exceptions project</description>
 	<build>
-		<defaultGoal>install</defaultGoal>
+		<defaultGoal>test</defaultGoal>
 	</build>
 
 	<modules>
@@ -16,4 +15,15 @@
 		<module>KeyboardInput</module>
 		<module>Stack</module>
 	</modules>
+	<artifactId>exceptions</artifactId>
+	
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.5</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
 </project>

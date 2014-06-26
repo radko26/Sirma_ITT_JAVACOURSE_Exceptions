@@ -5,7 +5,7 @@
     <artifactId>exceptions</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>KeyboardInput</artifactId>
+  <artifactId>keyboardinput</artifactId>
   <name>KeyboardInput</name>
   <description>KeyboardInput Exceptions handling</description>
 </project>
