@@ -21,7 +21,7 @@ public class Stack {
 	 *             when no elements have left for removing
 	 */
 	public void remove() throws StackEmptyException {
-		if (lastIndex > 1) {
+		if (lastIndex >= 0) {
 			stack[lastIndex] = null;
 			lastIndex--;
 		} else {
