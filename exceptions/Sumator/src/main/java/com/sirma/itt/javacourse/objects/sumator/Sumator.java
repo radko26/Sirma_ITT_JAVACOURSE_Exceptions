@@ -10,8 +10,6 @@ import java.math.BigInteger;
  */
 
 public class Sumator {
-	private BigInteger sumBigInteger;
-	private BigDecimal sumBigDecimal;
 
 	/**
 	 * Calculate the sum of two integers.
@@ -50,10 +48,7 @@ public class Sumator {
 	 *         keep the sum
 	 */
 	public String sum(BigInteger firstNumber, BigInteger secondNumber) {
-		sumBigInteger = new BigInteger("0");
-		sumBigInteger = sumBigInteger.add(firstNumber);
-		sumBigInteger = sumBigInteger.add(secondNumber);
-		return sumBigInteger.toString();
+		return firstNumber.add(secondNumber).toString();
 	}
 
 	/**
@@ -66,10 +61,7 @@ public class Sumator {
 	 * @return the sum
 	 */
 	public String sum(BigDecimal firstNumber, BigDecimal secondNumber) {
-		sumBigDecimal = new BigDecimal(0);
-		sumBigDecimal = sumBigDecimal.add(firstNumber);
-		sumBigDecimal = sumBigDecimal.add(secondNumber);
-		return sumBigDecimal.toString();
+		return firstNumber.add(secondNumber).toString();
 	}
 
 	/**
@@ -85,12 +77,8 @@ public class Sumator {
 	 */
 	public String sum(String firstNumber, String secondNumber)
 			throws NumberFormatException {
-		sumBigInteger = new BigInteger("0");
 		BigInteger firstNumberToInt = new BigInteger(firstNumber);
 		BigInteger secondNumberToInt = new BigInteger(secondNumber);
-
-		sumBigInteger = sumBigInteger.add(firstNumberToInt);
-		sumBigInteger = sumBigInteger.add(secondNumberToInt);
-		return sumBigInteger.toString();
+		return firstNumberToInt.add(secondNumberToInt).toString();
 	}
 }
