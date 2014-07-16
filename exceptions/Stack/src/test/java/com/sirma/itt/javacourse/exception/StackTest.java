@@ -13,7 +13,7 @@ import com.sirma.itt.javacourse.exception.StackFullException;
  */
 public class StackTest {
 	private Stack testStack;
-	private Object[] stackArray;
+	private Object[] stackArray = new Object[5];
 
 	/**
 	 * Tries to add element when the stack is full.
@@ -23,7 +23,6 @@ public class StackTest {
 	 */
 	@Test(expected = StackFullException.class)
 	public void testAddOverflow() throws StackFullException {
-		stackArray = new Object[2];
 		testStack = new Stack(stackArray);
 		while (true) {
 			testStack.add(new Object());
@@ -38,11 +37,9 @@ public class StackTest {
 	 */
 	@Test(expected = StackEmptyException.class)
 	public void testRemoveWhenEmpty() throws StackEmptyException {
-		stackArray = new Object[1];
 		testStack = new Stack(stackArray);
 		while (true) {
 			testStack.remove();
 		}
-
 	}
 }

@@ -50,7 +50,6 @@ public class Stack {
 	 * Prints all elements to the screen
 	 */
 	public void printAllElements() {
-		boolean empty = true;
 		for (int i = 0; i < lastIndex; i++) {
 			if (i == 0) {
 				System.out.print("Stack contains: ");
@@ -59,11 +58,9 @@ public class Stack {
 			if (i == lastIndex - 1) {
 				System.out.print("\n");
 			}
-			empty = false;
 		}
-		if (empty) {
+		if ( !(lastIndex >0 ) ) {
 			System.out.println("Stack is empty");
 		}
 	}
-
 }
